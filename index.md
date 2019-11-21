@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## WWelcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/enlighten2/enlighten2.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 

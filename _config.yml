@@ -3,7 +3,5 @@ show_downloads: true
 title: Enlighten2
 description: Protocols and tools to run (automated) atomistic simulations of enzyme-ligand systems
 github:
-  is_project_page: true
   repository_url: https://github.com/vanderkamp/enlighten2
-  repository_name: Enlighten2
   zip_url: https://github.com/vanderkamp/enlighten2-pymol/zipball/master

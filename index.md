@@ -17,7 +17,7 @@ Additional recommended software requirements:
 - propka31 (see the [github site](https://github.com/jensengroup/propka-3.1) or here: www.propka.ki.ku.dk; Required for p*K*a estimation titratable residues, in presence of ligand)
 
 
-###Download the repository on Linux/UNIX/Mac :   
+### Download the repository on Linux/UNIX/Mac :   
 
 First ensure that git is installed. Instructions are [here](http://git-scm.com/downloads). 
 
@@ -70,7 +70,7 @@ or from a set of atoms obtained from another `Pdb` instance:
 ```
 All the wrappers (except `SanderWrapper`) require a pdb object to be initialized. 
 
-### `wrappers.AntechamberWrapper`
+### wrappers.AntechamberWrapper
 takes a ligand pdb object and along with the desired ligand residue name and the charge,
 run parameterization with antechamber using bcc charges and write out the frcmod file using parmchk2. Full path to the 
 directory containing prepc and frcmod files is stored in `working_directory` field.
@@ -78,7 +78,7 @@ directory containing prepc and frcmod files is stored in `working_directory` fie
     antechamber_wrapper = wrappers.AntechanberWrapper(ligand_pdb, name='LIG', charge=0)
 ```
 
-### `wrappers.Pdb4AmberReduceWrapper`
+### wrappers.Pdb4AmberReduceWrapper
 takes a pdb object of a protein(-substrate complex), runs pdb preparation with pdb4amber
 and then adds hydrogen atoms with reduce. It also assigns proper names to histidines depending on their protonation state 
 and removes the hydrogen atoms added to all non-protein residues. The resulting pdb is stored as a Pdb object in 
@@ -88,7 +88,7 @@ and removes the hydrogen atoms added to all non-protein residues. The resulting 
     result = pbd4amber_reduce_wrapper.pdb    
 ```
 
-### `wrappers.PropkaWrapper`
+### wrappers.PropkaWrapper
 Runs `propka31` on the provided pdb, renames the protonated/deprotonated residues according to the results and removes
 hydrogens when needed. The resulting pdb is stored as a Pdb object in `pdb` field. Requires `propka31` to be available 
 in the $PATH. Accepts target pH (default 7.0) and pH_offset (default 0.7) as arguments.
@@ -97,7 +97,7 @@ in the $PATH. Accepts target pH (default 7.0) and pH_offset (default 0.7) as arg
     result = propka_wrapper.pdb
 ```
 
-### `wrappers.TleapWrapper`
+### wrappers.TleapWrapper
 runs system preparation using `tleap` based on a template input and a dictionary of parameters. Accepts a list of 
 non-protein residues and a list of directories to look for corresponding prepc/frcmod files.
 directories. At the moment only "sphere" template is available. Additional templates must are stored in enlighten2/tleap/ 

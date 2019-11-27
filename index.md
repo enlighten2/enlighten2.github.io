@@ -29,7 +29,9 @@ Command-line:
 2) Go to the command line on your Linux/Mac and cd to a suitable location to create the Repository
    Then type:
 
+   ```bash
    git clone https://github.com/vanderkamp/enlighten2.git
+   ```
 
    On some UNIX clusters, you may need to use SSH rather than HTTPS to clone the repository.
    This typically means you will also need to add your public ssh key for the cluster (~/.ssh/id_rsa.pub) to your github 
@@ -37,7 +39,9 @@ Command-line:
 
    Once the public ssh key is added, you can run:
 
+   ```bash
    git clone git@github.com:vanderkamp/enlighten2.git
+   ```
 
 3) Prior to running Enlighten through the command line, make sure your environment is set up for the external programs
 

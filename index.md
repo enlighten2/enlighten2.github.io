@@ -1,37 +1,182 @@
-## WWelcome to GitHub Pages
+To acknowledge the use of the Enlighten2 plugin and/or protocols, please refer to this website.
+(There is no publication to cite yet, please check back later.)
 
-You can use the [editor on GitHub](https://github.com/enlighten2/enlighten2.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Aimed at:
+ 
+- Experimental biochemists/enzymologists interested in gaining detailed insight into protein-ligand / enzyme-substrate complexes.
+- Biomolecular researchers that would like to perform simulations in a high(er)-throughput fashion, e.g. for testing and hypothesis generation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Minimal software requirements:
 
-### Markdown
+- [AmberTools14 or later](http://www.ambermd.org) (the manual - Amber14.pdf or later - has instructions for installation)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Several utitilies/programs from AmberTools14 (or later) are used for the majority of tasks.
 
-```markdown
-Syntax highlighted code block
+Additional recommended software requirements:
 
-# Header 1
-## Header 2
-### Header 3
+- propka31 (see the [github site](https://github.com/jensengroup/propka-3.1) or here: www.propka.ki.ku.dk; Required for p*K*a estimation titratable residues, in presence of ligand)
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+###Download the repository on Linux/UNIX/Mac :   
 
-**Bold** and _Italic_ and `Code` text
+First ensure that git is installed. Instructions are [here](http://git-scm.com/downloads). 
 
-[Link](url) and ![Image](src)
+Command-line:
+
+1) In the right-hand corner of this page, there is a title "HTTPS clone URL" with a URL in a field below it.
+   Copy this link 
+
+2) Go to the command line on your Linux/Mac and cd to a suitable location to create the Repository
+   Then type:
+
+   git clone https://github.com/vanderkamp/enlighten2.git
+
+   On some UNIX clusters, you may need to use SSH rather than HTTPS to clone the repository.
+   This typically means you will also need to add your public ssh key for the cluster (~/.ssh/id_rsa.pub) to your github 
+   account here: https://github.com/settings/ssh
+
+   Once the public ssh key is added, you can run:
+
+   git clone git@github.com:vanderkamp/enlighten2.git
+
+3) Prior to running Enlighten through the command line, make sure your environment is set up for the external programs
+
+   For AmberTools, do the following:
+   ```bash
+   source <full path to amber directory, e.g. /users/me/amber14/>amber.sh
+   ```
+
+   For PropKa, ensure that propka31 is in your $PATH (i.e. it is recognised as command from the command-line), e.g. in bash:
+   ```bash
+   export PATH=$PATH:<path to propka>/propka31
+   ```
+   
+## Using as a python package
+Enlighten2 package is based on a set of wrapper classes for various AmberTools programs. When an instance of a wrapper 
+class is initialized, it passes a protein(-substrate complex) structure to a corresponding program and stores the results 
+of the execution.
+
+### Pdb class
+A molecular structure is represented in Enlighten2 as an instance of `Pdb` class in `pdb_utils` module. It can be created
+either from a PDB file:
+```python
+    with open('XXXX.pdb') as f:
+        pdb = pdb_utils.Pdb(f)
+```
+or from a set of atoms obtained from another `Pdb` instance:
+```python
+    ligand_atoms = pdb.get_residues_by_name('LIG')[0]
+    ligand = pdb_utils.Pdb(ligand_atoms)
+```
+All the wrappers (except `SanderWrapper`) require a pdb object to be initialized. 
+
+### `wrappers.AntechamberWrapper`
+takes a ligand pdb object and along with the desired ligand residue name and the charge,
+run parameterization with antechamber using bcc charges and write out the frcmod file using parmchk2. Full path to the 
+directory containing prepc and frcmod files is stored in `working_directory` field.
+```python
+    antechamber_wrapper = wrappers.AntechanberWrapper(ligand_pdb, name='LIG', charge=0)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### `wrappers.Pdb4AmberReduceWrapper`
+takes a pdb object of a protein(-substrate complex), runs pdb preparation with pdb4amber
+and then adds hydrogen atoms with reduce. It also assigns proper names to histidines depending on their protonation state 
+and removes the hydrogen atoms added to all non-protein residues. The resulting pdb is stored as a Pdb object in 
+`pdb` field.
+```python
+    pbd4amber_reduce_wrapper = wrappers.Pdb4AmberReduceWrapper(pdb)
+    result = pbd4amber_reduce_wrapper.pdb    
+```
 
-### Jekyll Themes
+### `wrappers.PropkaWrapper`
+Runs `propka31` on the provided pdb, renames the protonated/deprotonated residues according to the results and removes
+hydrogens when needed. The resulting pdb is stored as a Pdb object in `pdb` field. Requires `propka31` to be available 
+in the $PATH. Accepts target pH (default 7.0) and pH_offset (default 0.7) as arguments.
+```python
+    propka_wrapper = wrappers.PropkaWrapper(pdb, ph=9.0, ph_offset=0.5)
+    result = propka_wrapper.pdb
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/enlighten2/enlighten2.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### `wrappers.TleapWrapper`
+runs system preparation using `tleap` based on a template input and a dictionary of parameters. Accepts a list of 
+non-protein residues and a list of directories to look for corresponding prepc/frcmod files.
+directories. At the moment only "sphere" template is available. Additional templates must are stored in enlighten2/tleap/ 
+directory named `<template name>.in`. For each template, a correspoding python module `<template name>.py` with functions 
+`run` and `check` must be provided. `run` is responsible for converting the dictionary of parameters and the template to 
+a valid tleap input. `check` is executed after tleap to validate the output and do any necessary postprocessing. See 
+tleap/sphere.py for an example. 
 
-### Support or Contact
+### Typical usage
+The most common use case for enlighten2 package is to parse the pdb file with pdb4amber, reduce and propka as following:
+```python
+    with open('XXXX.pdb') as f:
+        pdb = pdb_utils.Pdb(f)
+    pdb4amber_pdb = wrappers.Pdb4AmberReduceWrapper(pdb).pdb
+    propka_pdb = wrappers.PropkaWrapper(pdb4amber_pdb, ph=9.0).pdb
+    propka_pdb.to_filename('result.pdb')
+```
+`AntechamberWrapper` is only responsible for running antechamber/parmchk2 with predefined arguments and therefore gives
+little advantage over simply running the corresponding tools from a shell. The tleap usage is usually system specific, 
+so the `TleapWrapper` is also not expected to be used manually. These two wrapper classes are mainly responsible for 
+system preparation when using enlighten2 from a PyMOL plugin.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Available protocols
+The following predefined protocols are designed to be used through a PyMOL plugin, but can also be used from a command 
+line. 
+### PREP: prep.py
+
+prep.py takes enzyme-ligand pdb file and generates ligand parameters, adds hydrogens, adds solvent (sphere), generates 
+Amber topology/coordinate files.
+
+  Usage:
+  ```bash
+  prep.py <system name> <pdb file> <ligand name> <net ligand charge> [<additional parameters file>]
+  ```
+- The pdb file should contain at least 1 (non-protein) ligand, WITH all hydrogens added!
+- Uses the following AmberTools programs: antechamber (& sqm), prmchk2, pdb4amber, reduce, tleap 
+- Ideally requires installation of propka31 (and put in $PATH)
+- additional parameters are provided as a json file with the following fields:
+  ```
+  {
+    "antechamber": {
+        "ligand": <Ligand name>,
+        "charge": <Ligand charge>,
+        "ligand_chainID": <Ligand chain id> (default:  "L"),
+        "ligand_index": <Index of the ligand in the pdb> (default: 1)
+    },
+    "propka": {
+        "with_propka": <Whether to use propka> (default: True),
+        "ph": <pH of simulation> (default: 7.0),
+        "ph_offset": <allowed pKa-pH difference> (default:  0.7)
+    },
+    "tleap": {
+        "template": <tleap input template> (default: "sphere"),        
+        "solvent_radius": <Solvent sphere size> (default: 20.0),
+        "solvent_closeness": <Minimum solute-solvent distance> (default: 0.75),
+        "include": <Directories to look for frcmod/prepc files> (default: [])
+    }
+  }  
+  ```
+
+### DYNAM: dynam.py
+dynam.py runs a predefined relaxation/production MD protocol for a system created with PREP.
+
+  Usage:
+  ```bash
+  dynam.py <system name> [-relax] [<additional parameters file>]
+  ```
+
+- Uses sander program from AmberTools
+- runs short relaxation protocol when used with -relax argument, 
+else runs a longer production MD
+- additional parameters are provided as a json file with the following fields:
+  ```
+  {
+    "steps": <Number of MD steps> (default: 25000),
+    "belly_radius": <radius of the flexible sphere of atoms> (default: 4.5),
+    "central_atom": <center of the flexible sphere of atoms>
+  }  
+  ```
+ 
+ Note that the parameters belly_radius and central_atom are usually provided by PREP 
+ output and therefore are not required.

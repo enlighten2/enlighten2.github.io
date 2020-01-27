@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 permalink: /install/
-css: assets/css/install.css
+css: /assets/css/install.css
 ---
 
 ## Installation

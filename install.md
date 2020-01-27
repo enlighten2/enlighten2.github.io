@@ -7,7 +7,7 @@ permalink: /install/
 
 1. This instruction assumes that Docker and PyMOL are already installed on your
 system. We will first obtain the Enlighten plugin from the github repository. It 
-can be done either by clicking on "Download PyMol plugin" on top of this page or 
+can be done either by clicking on "Download PyMOL plugin" on top of this page or 
 from the [github repository](https://github.com/vanderkamp/enlighten2-pymol).
 
 2. Open PyMOL. The following window will appear, consisting of a viewing window 

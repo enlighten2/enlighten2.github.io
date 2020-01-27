@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-permalink: /install/
+permalink: /install
 ---
 
 ## Installation

@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/assets/css/navigation.css">
+<div class="tab">
+  {% for item in site.data.navigation %}
+    <a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>
+      {{ item.name }}
+    </a>
+  {% endfor %}
+</div>

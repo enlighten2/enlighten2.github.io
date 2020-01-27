@@ -1,0 +1,11 @@
+- name: About
+  link: /
+
+- name: Install
+  link: /install
+
+- name: Tutorial1
+  link: /tutorial1
+
+- name: Tutorial2
+  link: /tutorial2

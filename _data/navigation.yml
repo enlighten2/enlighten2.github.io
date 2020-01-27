@@ -4,8 +4,8 @@
 - name: Install
   link: /install/
 
-- name: Tutorial1
+- name: Tutorial 1
   link: /tutorial1/
 
-- name: Tutorial2
+- name: Tutorial 2
   link: /tutorial2/

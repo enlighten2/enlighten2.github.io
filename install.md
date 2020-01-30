@@ -32,8 +32,5 @@ first option and click OK.
 Exit the Plugin manager.
 ![](assets/img/install/05.png)
 
-7. Now you can open the Enlighten plugin from the Plugin drop-down menu.
+7. The Enlighten plugin is now available in the Plugin drop-down menu.
 ![](assets/img/install/06.png)
-
-8. The main plugin window will appear.
-![](assets/img/install/07.png)

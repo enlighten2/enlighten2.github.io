@@ -83,7 +83,7 @@ Now, you are ready to run *Enlighten* on 5LDG.
 We are now ready to use Enlighten to perform some simulations. 
 Go to the Plugin drop-down menu and choose "Enlighten". A (new) *Enlighten* control panel will 
 appear. Choose the PyMOL object 5DLG (if it is not already selected).
-The entry for System name is arbitrary - it can be what you choose. Results will 
+The entry for *System name* is arbitrary - it can be what you choose. Results will 
 be stored in a sub-directory with this name. Here we will use "5ldg_it9.sp20", because we 
 will generate a solvent sphere of 20 &#x212B;. You will need to enter IT9 as the *Ligand 
 Name*. Check that the other output settings are suitable (note that 
@@ -140,13 +140,14 @@ Even though in this case, there is a significant clash with the substrate IT9, g
 From the plugin menu choose *Enlighten* again.
 
 A *new* enlighten control panel will appear. To run simulations on the mutant 
-model, ensure that the new 5ldg\_e238y object is selected in the list and then 
-click RUN PREP. 
+model, ensure that the new 5ldg\_e238y object is selected in the list and fill 
+in the other fields similar to before (e.g. using 5ldg\_e238y.sp20 as the system name).
+When done, click Run PREP. 
 
 ![](assets/img/tutorial2/06.png)
 
-Once PREP is done, you will see the object 5ldg\_e238y.sp20. Note that there 
-will be 'bonds' shown between the clashing Tyr238 and the substrate. You can 
+Once PREP is done, you will see that the object 5ldg\_e238y.sp20_relax has been loaded. 
+Note that there will be 'bonds' shown between the clashing Tyr238 and the substrate. You can 
 remove the 'bonds' visualisation of the non-physical bonds using:
 
 `unbond resname IT9, res 234`

@@ -8,5 +8,5 @@ Aimed at:
 
 Minimal software requirements:
 
-- Docker
-- PyMOL
+- [Docker](https://docs.docker.com/install/)
+- [PyMOL](https://github.com/schrodinger/pymol-open-source)

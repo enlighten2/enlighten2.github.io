@@ -1,7 +1,7 @@
 ---
 title: "Tutorial 1"
 permalink: /tutorial1/
-css: /assets/css/tutorial1.css
+css: /assets/css/tutorial.css
 ---
 
 ## Tutorial 1: TEM-1 with sulbactam

@@ -4,7 +4,7 @@ permalink: /tutorial1/
 css: /assets/css/tutorial.css
 ---
 
-## Tutorial 1: TEM-1 with sulbactam
+# Tutorial 1: TEM-1 with sulbactam
 
 As an example, we will make a model of the class A beta-lactamase TEM-1 with 
 sulbactam. There is no crystal structure available for the complex of TEM-1 with
@@ -14,7 +14,7 @@ structures.
 > **NB**: Whenever text is written in a `box like this`, it is a command that 
 should be typed in the PyMOL control panel.
 
-### Part 1: Making a model of the TEM-1-Sulbactam complex
+## Part 1: Making a model of the TEM-1-Sulbactam complex
 
 > **NB**: if you want to skip Part 1 and go straight to Part 2, you can set up 
 the model by running a pre-prepared PyMOL script. This script can be found 

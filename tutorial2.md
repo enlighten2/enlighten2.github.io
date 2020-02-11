@@ -30,9 +30,7 @@ NADP(H) (which have residue names IT9 and NAP respectively):
 
 `zoom resname IT9+NAP`
 
-![](assets/img/tutorial2/01.png)__When you have come to the end of the tutorial and explored *Enlighten* in some detail, please fill out the *[feedback survey](https://goo.gl/forms/2KsHY7PGuqA9skV53)*.__
-
-Results from the survey will influence future priorities for further development, so your views are important.
+![](assets/img/tutorial2/01.png)
 
 You will notice that in this PDB, hydrogen atoms are already present. This means 
 that in principle, we can start using *Enlighten* directly on this object. 

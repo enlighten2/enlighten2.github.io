@@ -5,7 +5,7 @@ css: /assets/css/tutorial.css
 ---
 
 # Enlighten Tutorial 2: enzyme with co-factor
-As an example of an enzyme system with (non-covalently bound) co-factor, we will 
+As an example of an enzyme system with a (non-covalently bound) co-factor, we will 
 use an NADP(H) containing reductase enzyme: isopiperitenone reductase. The 
 starting point is PDB 5LDG, the structure of isopiperitenone reductase complexed 
 with its substrate and NADP (see further 
@@ -80,16 +80,18 @@ can be downloaded from [here](/assets/tutorial2/NAP.frcmod).
 Now, you are ready to run *Enlighten* on 5LDG.
 
 ## Part 2: Running the *Enlighten* protocols through the plugin 
-Go to the Plugin drop-down menu and choose "enlighten".
 We are now ready to use Enlighten to perform some simulations. 
-From the plugin menu choose Enlighten. A (new) *Enlighten* control panel will 
-appear. System name is arbitrary, here we will use "5ldg_it9.sp20", because we 
-will generate a solvent sphere of 20 &#x212B;. You will need to change *Ligand 
-Name* to IT9. Check that the other output settings are suitable (Note that 
-*Ligand Charge* should be 0), ensure that the NAP.frcmod and NAP.prepc files are 
-in the chosen Worling directopy and then click RUN PREP.
+Go to the Plugin drop-down menu and choose "Enlighten". A (new) *Enlighten* control panel will 
+appear. Choose the PyMOL object 5DLG (if it is not already selected).
+The entry for System name is arbitrary - it can be what you choose. Results will 
+be stored in a sub-directory with this name. Here we will use "5ldg_it9.sp20", because we 
+will generate a solvent sphere of 20 &#x212B;. You will need to enter IT9 as the *Ligand 
+Name*. Check that the other output settings are suitable (note that 
+*Ligand Charge* should be 0) and ensure that the NAP.frcmod and NAP.prepc files are 
+in the chosen Worling directopy. You should then then click Run PREP (with "Run equilibration")
+ticked.
 
-RUN PREP may take a couple of minutes to complete. Wait until the terminal 
+Run PREP may take a couple of minutes to complete. Wait until the terminal 
 window disappears. This means the protocol has finished successfully. If not, 
 please note the message printed for more information.
 

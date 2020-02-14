@@ -88,7 +88,7 @@ be stored in a sub-directory with this name. Here we will use "5ldg_it9.sp20", b
 will generate a solvent sphere of 20 &#x212B;. You will need to enter IT9 as the *Ligand 
 Name*. Check that the other output settings are suitable (note that 
 *Ligand Charge* should be 0) and ensure that the NAP.frcmod and NAP.prepc files are 
-in the chosen Worling directopy. You should then then click Run PREP (with "Run equilibration")
+in the chosen Working directory. You should then then click Run PREP (with "Run equilibration")
 ticked.
 
 Run PREP may take a couple of minutes to complete. Wait until the terminal 

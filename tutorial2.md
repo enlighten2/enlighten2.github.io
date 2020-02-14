@@ -103,11 +103,19 @@ cap" of radius 20 Å have been added to the model.
 Now click on "Dynamics" tab on the top of the plugin window, click on the system 
 name, then click "Run dynamics".
 
-This will take some time to run (estimated times will be printed in the PyMOL control panel), so we can now start to prepare a mutant model.
+This will take some time to run (estimated times will be printed in the PyMOL 
+control panel), so we can now start to prepare a mutant model.
 
 ## Part 3: Creating a mutant and running *Enlighten*
 
-We will now create a mutant structure to simulate for comparison. We will make the E238Y mutation, which was shown to switch the activity of the enzyme towards ketoreduction. See [the paper](http://dx.doi.org/10.1002/ange.201603785) for details.
+We will now create a mutant structure to simulate for comparison. We will make 
+the E238Y mutation, which was shown to switch the activity of the enzyme towards 
+ketoreduction. See [the paper](http://dx.doi.org/10.1002/ange.201603785) for 
+details.
+
+**NB**: If the simulation of the wild type enzyme is still running, you can open
+a second instance of pymol add execute `fetch 5LDG` to continue.  
+
 
 We will start by copying our object 5LDG to the new object 5ldg\_e238y.
 

@@ -13,3 +13,5 @@ Minimal software requirements:
 
 - [Docker](https://docs.docker.com/install/)
 - [PyMOL](https://github.com/schrodinger/pymol-open-source)
+
+![](assets/img/about/workflow.png)

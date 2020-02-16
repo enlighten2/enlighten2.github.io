@@ -16,7 +16,7 @@ should be typed in the PyMOL control panel.
 
 ## Part 1: Making a model of the TEM-1-Sulbactam complex
 
-> **NB**: if you want to skip Part 1 and go straight to Part 2, you can set up 
+> **NB**: if you want to skip Part 1 and go straight to [Part 2](#Part-2:-Running-the-*Enlighten*-protocols-through-the-plugin), you can set up 
 the model by running a pre-prepared PyMOL script. This script can be found 
 [here](/assets/tutorial1/setup.pml).
 > To load the script, type in the PyMOL control panel:
@@ -138,7 +138,8 @@ delete, this is how they can be deleted from the structure:
 We will now add hydrogen atoms to sulbactam using the h_add function in PyMOL. 
 
 `h_add (1btl_0rn and resname 0RN)`
-And zoom on the (ORN) selection in the right hand side.
+
+You can again zoom on the (0RN) selection using the A (Action) menu on the right hand side of the selection.
 
 Note that sulbactam has a charge of -1*e* and you will need to check visually to 
 make sure that they have been placed reasonably.
@@ -186,11 +187,12 @@ sphere center will be located at the geometric center of the ligand.
 Alternatively, xyz coordinates may be provided manually or taken from a selected 
 atom. We will leave all the options as default. 
 
-You can now click RUN PREP.
+You can now click *Run PREP*.
 
-RUN PREP may take a couple of minutes to complete. it will take longer if you 
-run Enlighten for the first time, because Docker has to fetch the Enlighten 
-image first. Please wait until the terminal window disappears.
+*Run PREP* may take a couple of minutes to complete. It will take longer if you 
+run Enlighten for the first time, because Docker has to fetch the *Enlighten2* 
+image first (this will download and install the required utilities from 
+[AmberTools19](http://ambermd.org/AmberTools.php)). Please wait until the terminal window disappears.
 
 > **NB**: When using Docker Toolbox an error message starting with "mesg: 
 ttyname failed..." might appear in the terminal. This message can be safely

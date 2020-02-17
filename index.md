@@ -1,7 +1,7 @@
 To acknowledge the use of the Enlighten2 plugin and/or protocols, please refer to this website.
 (There is no publication to cite yet, please check back later.)
 
-Based on [AmberTools18](https://ambermd.org/AmberTools.php) and 
+Based on [AmberTools19](https://ambermd.org/AmberTools.php) and 
 [Propka3.1](https://github.com/jensengroup/propka-3.1).
 
 Aimed at:

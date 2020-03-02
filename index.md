@@ -12,7 +12,7 @@ Aimed at:
 Minimal software requirements:
 
 - [Docker](https://docs.docker.com/install/)
-- [PyMOL](https://github.com/schrodinger/pymol-open-source)
+- [PyMOL](https://github.com/schrodinger/pymol-open-source) version 2.0 or higher.
 
 Package overview:
 

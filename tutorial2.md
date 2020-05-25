@@ -12,9 +12,12 @@ with its substrate and NADP (see further
 [this paper](http://dx.doi.org/10.1002/ange.201603785)). We will need to supply 
 parameters for the NADP co-factor.
 
-**NB**: Whenever text is written in a `box like this`, it is a command that 
+> **NB**: Whenever text is written in a `box like this`, it is a command that 
 should be typed on a "command line", either in a "terminal" or in the PyMOL 
 control panel.
+
+> **NB**: Before running Enlighten2 through PyMOL, ensure that Docker is 
+installed and running in the background.
 
 ## Part 1: Preparing the model and co-factor parameters
 We will use PyMOL to obtain the crystal structure we need directly from the 

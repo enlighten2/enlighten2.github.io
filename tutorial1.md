@@ -14,6 +14,9 @@ structures.
 > **NB**: Whenever text is written in a `box like this`, it is a command that 
 should be typed in the PyMOL control panel.
 
+> **NB**: Before running Enlighten2 through PyMOL, ensure that Docker is 
+installed and running in the background.
+
 ## Part 1: Making a model of the TEM-1-Sulbactam complex
 
 > **NB**: if you want to skip Part 1 and go straight to [Part 2](#Part-2:-Running-the-*Enlighten*-protocols-through-the-plugin), you can set up 

@@ -2,5 +2,6 @@ theme: jekyll-theme-cayman
 title: Enlighten2
 description: Protocols and tools to run (automated) atomistic simulations of enzyme-ligand systems
 github:
-  repository_url: https://github.com/vanderkamp/enlighten2
+  plugin_repository_url: https://github.com/vanderkamp/enlighten2-pymol
+  package_repository_url: https://github.com/vanderkamp/enlighten2
   zip_url: https://github.com/vanderkamp/enlighten2-pymol/zipball/master

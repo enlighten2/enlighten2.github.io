@@ -18,12 +18,12 @@ The only dependencies of the Enlighten2 PyMOL plugin are
 [Docker](https://docs.docker.com/install/). Installation instructions for 
 different platform can be found on the following webpages.
 
-**PyMOL**
+### PyMOL
 * [Windows](https://pymolwiki.org/index.php/Windows_Install)
 * [Mac](https://pymolwiki.org/index.php/MAC_Install)
 * [Linux](https://github.com/schrodinger/pymol-open-source/blob/master/INSTALL)
 
-**Docker**
+### Docker
 * [Windows 10 Pro](https://docs.docker.com/docker-for-windows/install/) Note that 
 Windows Home 
 * [Windows 10 Home](https://docs.docker.com/docker-for-windows/install-windows-home/) 

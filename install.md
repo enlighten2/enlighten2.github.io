@@ -24,8 +24,7 @@ different platform can be found on the following webpages.
 * [Linux](https://github.com/schrodinger/pymol-open-source/blob/master/INSTALL)
 
 ### Docker
-* [Windows 10 Pro](https://docs.docker.com/docker-for-windows/install/) Note that 
-Windows Home 
+* [Windows 10 Pro](https://docs.docker.com/docker-for-windows/install/)
 * [Windows 10 Home](https://docs.docker.com/docker-for-windows/install-windows-home/) 
 (version 2004 or higher, for older versions, please, install 
 [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/))

@@ -65,7 +65,8 @@ NAD in the PDB file 5LDG (and similarly for the residue name). As usual, this
 is not the case, and you will need to edit the .prep file *or* the .pdb file.
 2. *Enlighten* will understand to use the .prep and .frcmod files for the 
 residue NAP. Currently, this will be the case if the files are in the same 
-directory where you run *Enlighten*, *and* filenames are the same as the 
+directory where you run *Enlighten* (i.e. the "Working directory" indicated 
+in the *Enlighten2* plugin), *and* filenames are the same as the 
 three-letter residue name in the PDB, and the extensions are **.prepc** or 
 **.off** for the 'topology' file and **.frcmod** for the parameter file 
 (see above). 
@@ -84,7 +85,7 @@ Now, you are ready to run *Enlighten* on 5LDG.
 
 ## Part 2: Running the *Enlighten* protocols through the plugin 
 We are now ready to use Enlighten to perform some simulations. 
-Go to the Plugin drop-down menu and choose "Enlighten". A (new) *Enlighten* control panel will 
+Go to the Plugin drop-down menu and choose "Enlighten". A (new) *Enlighten2* control panel will 
 appear. Choose the PyMOL object 5DLG (if it is not already selected).
 The entry for *System name* is arbitrary - it can be what you choose. Results will 
 be stored in a sub-directory with this name. Here we will use "5ldg_it9.sp20", because we 
@@ -153,7 +154,7 @@ From the plugin menu choose *Enlighten* again.
 A *new* enlighten control panel will appear. To run simulations on the mutant 
 model, ensure that the new 5ldg\_e238y object is selected in the list and fill 
 in the other fields similar to before (e.g. using 5ldg\_e238y.sp20 as the system name).
-When done, click Run PREP. 
+When done, click Run PREP (with *Run equilibration* ticked). 
 
 ![](assets/img/tutorial2/06.png)
 
@@ -195,7 +196,7 @@ NADPH and re-running simulations with menthone instead of isopiperitenone.)
 Bugs in the Enlighten plugin or scripts can be reported as an "Issue" through 
 the [github site](https://github.com/vanderkamp/enlighten2/issues).
 
-If you have in-depth feedback or thoughts about Enlighten you would like to share, please [get in touch](mailto:marcvanderkamp@gmail.com).
+If you have in-depth feedback or thoughts about Enlighten you would like to share, please [get in touch](mailto:marc.vanderkamp@bristol.ac.uk).
 
 
 ### Thank you!

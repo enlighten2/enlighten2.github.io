@@ -16,7 +16,7 @@ instructions for the Python package can be found
 The only dependencies of the Enlighten2 PyMOL plugin are 
 [PyMOL](https://github.com/schrodinger/pymol-open-source) and 
 [Docker](https://docs.docker.com/install/). Installation instructions for 
-different platform can be found on the following webpages.
+different platforms can be found on the webpages linked below.
 
 ### PyMOL
 * [Windows](https://pymolwiki.org/index.php/Windows_Install)

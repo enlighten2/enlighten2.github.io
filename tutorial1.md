@@ -274,3 +274,11 @@ trajectories through the Enlighten plugin by specifying the working directory,
 selecting the system and clicking "Load trajectory". 
 
 ![](assets/img/tutorial1/24.png)
+
+-----------
+
+
+Bugs in the Enlighten plugin or scripts can be reported as an "Issue" through 
+the [github site](https://github.com/vanderkamp/enlighten2/issues).
+
+If you have in-depth feedback or thoughts about Enlighten you would like to share, please [get in touch](mailto:marc.vanderkamp@bristol.ac.uk).

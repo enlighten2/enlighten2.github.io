@@ -14,11 +14,11 @@ instructions for the Python package can be found
 [Propka3.1](https://github.com/jensengroup/propka-3.1)).
 
 The only dependencies of the Enlighten2 PyMOL plugin are 
-[PyMOL](https://github.com/schrodinger/pymol-open-source) and 
+[PyMOL](https://github.com/schrodinger/pymol-open-source) (version 2.0 or higher) and 
 [Docker](https://docs.docker.com/install/). Installation instructions for 
 different platforms can be found on the webpages linked below.
 
-### PyMOL
+### PyMOL (version 2.x)
 * [Windows](https://pymolwiki.org/index.php/Windows_Install)
 * [Mac](https://pymolwiki.org/index.php/MAC_Install)
 * [Linux](https://github.com/schrodinger/pymol-open-source/blob/master/INSTALL)

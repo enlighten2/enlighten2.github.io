@@ -2,7 +2,7 @@
 
 `docker image rm kzinovjev/enlighten2`
 
-in the terminal.
+in the Linux/MacOS terminal or Windows PowerShell.
 
 -------
 

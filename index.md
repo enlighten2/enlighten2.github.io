@@ -1,12 +1,9 @@
-<span style="color:red">
-
 **24.06.2020**: Fixed bug in the Docker image. If you tried to run the PyMOL plugin before this date, please run
 
 `docker image rm kzinovjev/enlighten2`
 
 in the terminal.
 
-</span>
 -------
 
 To acknowledge the use of the Enlighten2 plugin and/or protocols, please refer to this website.

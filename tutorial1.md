@@ -19,7 +19,7 @@ installed and running in the background.
 
 ## Part 1: Making a model of the TEM-1-Sulbactam complex
 
-> **NB**: if you want to skip Part 1 and go straight to [Part 2](#Part-2:-Running-the-*Enlighten*-protocols-through-the-plugin), you can set up 
+> **NB**: if you want to skip Part 1 and go straight to [Part 2](#part-2:-running-the-enlighten-protocols-through-the-plugin), you can set up 
 the model by running a pre-prepared PyMOL script. This script can be found 
 [here](/assets/tutorial1/setup.pml).
 > To load the script, type in the PyMOL control panel:

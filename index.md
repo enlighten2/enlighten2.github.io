@@ -1,13 +1,6 @@
-**24.06.2020**: Fixed bug in the Docker image. If you tried to run the PyMOL plugin before this date, please run
+To acknowledge the use of the Enlighten2 plugin and/or protocols, please cite the following publication:
 
-`docker image rm kzinovjev/enlighten2`
-
-in the Linux/MacOS terminal or Windows PowerShell.
-
--------
-
-To acknowledge the use of the Enlighten2 plugin and/or protocols, please refer to this website.
-(There is no publication to cite yet, please check back later.)
+[Enlighten2: molecular dynamics simulations of protein-ligand systems made accessible](https://doi.org/10.1093/bioinformatics/btaa643)
 
 Aimed at:
  
@@ -60,3 +53,12 @@ Bugs in the Enlighten plugin or scripts can be reported as an "Issue" through
 the [github site](https://github.com/vanderkamp/enlighten2/issues).
 
 If you have feature requests, in-depth feedback or other thoughts about Enlighten that you would like to share, please [get in touch](mailto:marc.vanderkamp@bristol.ac.uk).
+
+-------
+
+
+**24.06.2020**: Fixed bug in the Docker image. If you tried to run the PyMOL plugin before this date, please run
+
+`docker image rm kzinovjev/enlighten2`
+
+in the Linux/MacOS terminal or Windows PowerShell.

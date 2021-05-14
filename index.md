@@ -49,8 +49,10 @@ back to PyMOL.
 -----------
 
 
-Bugs in the Enlighten plugin or scripts can be reported as an "Issue" through 
-the [github site](https://github.com/vanderkamp/enlighten2/issues).
+Bugs in the package or plugin can be reported as an "Issue" in the 
+corresponding GitHub repository 
+([Python package](https://github.com/vanderkamp/enlighten2/issues), 
+[PyMOL plugin](https://github.com/vanderkamp/enlighten2-pymol/issues)).
 
 If you have feature requests, in-depth feedback or other thoughts about Enlighten that you would like to share, please [get in touch](mailto:marc.vanderkamp@bristol.ac.uk).
 

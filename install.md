@@ -21,7 +21,7 @@ different platforms can be found on the webpages linked below.
 ### PyMOL (version 2.x)
 * [Windows](https://pymolwiki.org/index.php/Windows_Install)
 * [Mac](https://pymolwiki.org/index.php/MAC_Install)
-* [Linux](https://github.com/schrodinger/pymol-open-source/blob/master/INSTALL)
+* [Linux](https://pymolwiki.org/index.php/Linux_Install)
 
 ### Docker
 * [Windows 10 Pro](https://docs.docker.com/docker-for-windows/install/)

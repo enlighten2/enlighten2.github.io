@@ -7,6 +7,8 @@ Aimed at:
 - Experimental biochemists/enzymologists interested in gaining detailed insight into protein-ligand / enzyme-substrate complexes.
 - Biomolecular researchers that would like to perform simulations in a high(er)-throughput fashion, e.g. for testing and hypothesis generation
 
+Enlighten2 was developed with support from the UK Catalysis Hub [EPSRC grant EP/M013219/1] and BBSRC [BB/L018756/1 and BB/M026280/1].
+
 **Minimal software requirements**
 
 - [Docker](https://docs.docker.com/install/)
